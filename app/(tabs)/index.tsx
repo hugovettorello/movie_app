@@ -16,7 +16,7 @@ export default function Index() {
     loading: moviesLoading, 
     error: moviesError
   } = useFetch(() => fetchMovies({
-    query: 'iron man'
+    query: ''
   }))
   return (
     <View 
@@ -48,7 +48,7 @@ export default function Index() {
           <View className="flex-1 mt-5">
           <SearchBar
             onPress={() => router.push("/search")}
-            placeHolder="Search for a movie"
+            placeholder="Search for a movie"
           />
           <>
             <Text className="text-lg text-white font-bold mt-5 mb-3">Latest Movies</Text>
